@@ -40,6 +40,10 @@ class Filemanager:
         ugfx.input_attach(ugfx.JOY_DOWN, self.joy_down)
         ugfx.input_attach(ugfx.JOY_LEFT, self.joy_left)
         ugfx.input_attach(ugfx.JOY_RIGHT, self.joy_right)
+        ugfx.input_attach(ugfx.BTN_A, self.btn_a)
+        ugfx.input_attach(ugfx.BTN_B, self.btn_b)
+        ugfx.input_attach(ugfx.BTN_START, self.btn_start)
+        ugfx.input_attach(ugfx.BTN_SELECT, self.btn_select)
 
     def joy_up(self, active):
         self.debug()
@@ -66,6 +70,18 @@ class Filemanager:
         if active and self.active_lane != 1:
             self.switch_lane(1)
             self.draw()
+
+    def btn_a(self, active):
+        self.debug()
+
+    def btn_b(self, active):
+        self.debug()
+
+    def btn_start(self, active):
+        self.debug()
+
+    def btn_select(self, active):
+        self.debug()
 
     def load_list(self, lane_number, path):
         self.item_counter[lane_number] = 0
