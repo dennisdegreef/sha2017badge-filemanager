@@ -99,11 +99,12 @@ class Filemanager:
         self.draw()
 
     def debug(self):
-        print("left_i: {}, right_i: {}, active_lane: {}, left_selected: {}".format(
+        print("left_i: {}, left_s: {}, right_i: {}, right_s: {}, active_lane: {}".format(
             self.index[0],
+            self.options[0].selected_index(),
             self.index[1],
+            self.options[1].selected_index(),
             self.active_lane,
-            self.options[0].selected_index()
         ))
 
     def draw(self):
